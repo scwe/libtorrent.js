@@ -27,8 +27,6 @@ class AddTorrentParams : public Nan::ObjectWrap {
     static NAN_SETTER(StorageModeSet);
     static NAN_GETTER(StorageGet);
     static NAN_SETTER(StorageSet);
-    static NAN_GETTER(UserDataGet);
-    static NAN_SETTER(UserDataSet);
     static NAN_GETTER(FilePrioritiesGet);
     static NAN_SETTER(FilePrioritiesSet);
     static NAN_GETTER(TrackerIdGet);

@@ -7,3 +7,6 @@ console.log("Params are: ", params)
 params.url = "something something"
 console.log('Params are: ', params.url)
 
+params.filePriorities = [1,2,3,4]
+console.log('Now: ', params.filePriorities)
+
