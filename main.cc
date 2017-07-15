@@ -34,6 +34,11 @@ void Initialize(v8::Local<v8::Object> exports) {
   module->Set(Nan::New("exports").ToLocalChecked(), libtorrentObj);*/
 
   AddTorrentParams::Init(exports);
+
+  v8::Local<v8::Object> storageModeEnum = Nan::New<v8::Object>();
+  storageModeEnum->Set(Nan::New("storage_mode_allocate").ToLocalChecked(), Nan::New(0));
+  storageModeEnum->Set(Nan::New("storage_mode_sparse").ToLocalChecked(), Nan::New(1));
+  exports->Set(Nan::New("storage_mode_t").ToLocalChecked(), storageModeEnum);
 }
 
 NODE_MODULE(libtorrent, Initialize)  
